@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.links {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
