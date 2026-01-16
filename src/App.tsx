@@ -3,17 +3,6 @@ import { InfinityScroll } from "./pages/InfinityScroll";
 import { Salary } from "./pages/Salary";
 import { Layout } from "./components/Layout";
 
-const routes = [
-  {
-    path: "/",
-    element: <InfinityScroll />,
-  },
-  {
-    path: "/",
-    element: <Salary />,
-  },
-];
-
 function App() {
   return (
     <Routes>

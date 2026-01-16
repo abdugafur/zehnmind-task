@@ -1,31 +1,27 @@
-export type IMinMax = {
-  min: number;
-  max: number;
-};
-export type IAtribut = {
-  name: string;
-  description: string;
-  hypoallergenic: boolean;
-  life: IMinMax;
-  male_weight: IMinMax;
-  female_weight: IMinMax;
-};
-export type IBreed = {
+export interface IContent {
   id: string;
-  type: string;
-  attributes: IAtribut;
-};
-
-type IMeta = {
-  pagination: {
-    current: number;
-    next: number;
-    last: number;
-    records: number;
+  title: {
+    en: string;
+    ru: string;
+    uz: string;
   };
-};
+  description: string | null;
+  videoUrl: string;
+  cloudinaryPublicId: string;
+  isActive: boolean;
+  order: number;
+  createdAt: string;
+  updatedAt: string;
+}
 
-export type IBreedResponse = {
-  data: IBreed[];
-  meta: IMeta;
-};
+export interface IContentResponse {
+  data: IContent[];
+  meta: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+}
